@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../static/admin/style_base.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap"
+      rel="stylesheet"
+    />
+    {% block head %} {% endblock %}
+    <title>TradeWARF Admin</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-wrap">
+        <ul class="navbar-menu">
+          <li>
+            <a class="nav-items" , href="/admin/items">
+              <p>Items</p>
+            </a>
+          </li>
+          <li>
+            <a class="nav-approve-item" , href="/admin/approve_item">
+              <p>Approve item</p>
+            </a>
+          </li>
+          <li>
+            <a class="nav-approve-arcane-location" , href="/admin/approve_arcane_location">
+              <p>Approve arcane location</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="content">{% block content %} {% endblock %}</div>
+  </body>
+</html>

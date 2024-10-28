@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="static/web/style_base.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap"
+      rel="stylesheet"
+    />
+    {% block head %}{% endblock %}
+    <title>TradeWARF</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-back">
+          <a class="navbar-title" href="/">
+            <img
+              class="nav-image"
+              ,
+              src="../static/web/images/home_icon.svg"
+              ,
+              alt=""
+            />
+            <p class="nav-label">{{ navigation.title }}</p>
+          </a>
+        </div>
+
+        <div class="navbar-back">
+          <div class="navbar-wrap">
+            <ul class="navbar-menu">
+              <li>
+                <a class="nav-arcane" , href="/arcane">
+                  <img
+                    class="nav-image"
+                    ,
+                    src="../static/web/images/arcane_icon.svg"
+                    ,
+                    alt=""
+                  />
+                  <p class="nav-label">{{ navigation.arcane }}</p>
+                </a>
+              </li>
+              <li>
+                <a class="nav-guns" , href="/guns">
+                  <img
+                    class="nav-image"
+                    ,
+                    src="../static/web/images/fractional_icon.svg"
+                    ,
+                    alt=""
+                  />
+                  <p class="nav-label">{{ navigation.guns }}</p>
+                </a>
+              </li>
+              <li>
+                <a class="nav-primed-mods" , href="/primed_mods">
+                  <img
+                    class="nav-image"
+                    ,
+                    src="../static/web/images/prime_mod_icon.svg"
+                    ,
+                    alt=""
+                  />
+                  <p class="nav-label">{{ navigation.prime_mods }}</p>
+                </a>
+              </li>
+              <li>
+                <a class="nav-teshin-shop" , href="/teshin_shop">
+                  <img
+                    class="nav-image"
+                    ,
+                    src="../static/web/images/steel_icon.svg"
+                    ,
+                    alt=""
+                  />
+                  <p class="nav-label">{{ navigation.teshin_shop }}</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">{% block content %}{% endblock %}</div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../static/admin/style_items.css" />
+{% endblock %}
+
+{% block content %}
+    <div class="items">
+        <div class="scroll-table">
+            <table id="item-table">
+                <thead>
+                    <tr>
+                        <th class="col">{{ admin_items.url }}</th>
+                        <th class="col">{{ admin_items.item_id}}</th>
+                        <th class="col">{{ admin_items.wfm_id }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in items %}
+                        <tr>
+                            <th>{{ item.url_name }}</th>
+                            <th>{{ item.item_id }}</th>
+                            <th>{{ item.wfm_id }}</th>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

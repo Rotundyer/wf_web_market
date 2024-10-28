@@ -1,0 +1,240 @@
+.nav-approve-item {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(5%) saturate(1253%)
+    hue-rotate(123deg) brightness(97%) contrast(93%);
+  transform: scale(1.2);
+}
+
+.nav-approve-item:not([disabled]):hover {
+  cursor: pointer;
+}
+
+.approve-item {
+  width: 100%;
+  display: grid;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.approve-url p {
+  font-size: 20px;
+}
+
+.approve-url input {
+  width: 50vw;
+  font-size: 20px;
+  padding: 2px 5px;
+}
+
+.approve-button {
+  border-radius: 5px;
+  font-size: 22px;
+  background: #21222d;
+  color: #ffffff;
+  padding: 5px 15px;
+  border: 2px solid #ffffff;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.approve-button:hover {
+  color: #a9dfd8;
+  border: 2px solid #a9dfd8;
+}
+
+.approve-button:active {
+  transform: translateY(2px);
+}
+
+hr {
+  margin-top: 20px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.approve-info {
+  visibility: hidden;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 70vw;
+}
+
+.approve-info .info div p {
+  font-size: 16px;
+  padding: 2px 5px;
+  color: #a0a0a0;
+  margin: 0px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.approve-info .info div input {
+  background: #a0a0a0;
+  width: 30vw;
+  font-size: 20px;
+  padding: 2px 5px;
+}
+
+.approve-info .info div input.input-validation-error{
+  border: 1px solid red;
+}
+
+.approve-hr,
+.approve-end-button {
+  visibility: hidden;
+}
+
+.approve-end-button button {
+  border-radius: 5px;
+  font-size: 22px;
+  background: #21222d;
+  color: #ffffff;
+  padding: 5px 15px;
+  border: 2px solid #ffffff;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.approve-end-button button:hover {
+  color: #a9dfd8;
+  border: 2px solid #a9dfd8;
+}
+
+.approve-end-button button:active {
+  transform: translateY(2px);
+}
+
+.location-select {
+  display: -ms-inline-grid;
+  margin-top: 0;
+  justify-content: start;
+}
+
+.location-select .location-select p {
+  font-size: 16px;
+  padding: 2px 5px;
+  color: #a0a0a0;
+  margin: 0px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
+.location-select div select {
+  display: block;
+  min-width: 150px;
+  width: 100%;
+  max-width: 250px;
+  height: 30px;
+  font: inherit;
+  font-weight: 500;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  padding-left: 5px;
+}
+
+.location-select div section option {
+  size: 30px;
+}
+
+.approve-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.approve-checkbox p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+}
+
+.input-checkbox {
+  margin-left: 0;
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+}
+
+.toasts {
+  height: 100%;
+  width: 25%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1000;
+  display: grid;
+  align-items: end;
+  margin-bottom: 50px;
+  overflow-x: hidden;
+  pointer-events: none;
+  padding-left: 30px;
+}
+
+.toast {
+  border-radius: 10px 10px 0 10px;
+  background: #21222d;
+  padding: 15px 35px 15px 25px;
+  margin-right: 30px;
+  color: #ffffff;
+  border: 2px solid #a9dfd8;
+  border-left: 6px solid #fd80ee;
+  overflow: hidden;
+  transform: translateX(calc(100% + 30px));
+  transition: all 0.5s cubic-bezier(0.68, -0.35, 0.265, 1.35);
+}
+
+.toast.active {
+  transform: translateX(0%);
+}
+
+.toast .toast-content {
+  display: flex;
+  align-content: center;
+}
+
+.toast-content .toast-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.toast-label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fd80ee;
+}
+
+.toast-text {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+.toast .toast-progress {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 3px;
+  width: 97%;
+  background: #21222d;
+}
+
+.toast .toast-progress:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: #fd80ee;
+  height: 100%;
+  width: 100%;
+}
+
+.toast-progress.active:before {
+  animation: progress 5s linear forwards;
+}
+
+@keyframes progress {
+  100% {
+    right: 100%;
+  }
+}

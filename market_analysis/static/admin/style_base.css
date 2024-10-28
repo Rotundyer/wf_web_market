@@ -1,0 +1,45 @@
+body {
+  height: 100%;
+  background: url("images/background.jpg");
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.navbar {
+  box-shadow: 0px 4px 10px #21222D60;
+}
+
+.navbar-menu li {
+  display: inline-block;
+}
+
+.navbar-menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #a0a0a0;
+  margin-right: 40px;
+}
+
+.navbar-menu li a:hover {
+  transform: scale(1.2);
+  filter: brightness(0) saturate(100%) invert(87%) sepia(5%) saturate(1253%)
+    hue-rotate(123deg) brightness(97%) contrast(93%);
+}
+
+.navbar-menu li a p {
+  font-size: 16px;
+  text-align: center;
+  user-select: none
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  padding: 0px 40px;
+}

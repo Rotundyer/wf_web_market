@@ -1,0 +1,13 @@
+.nav-arcane {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(5%) saturate(1253%)
+    hue-rotate(123deg) brightness(97%) contrast(93%);
+  transform: scale(1.2);
+}
+
+.nav-arcane:not([disabled]):hover {
+  cursor: pointer;
+}
+
+.text {
+  font-size: 50px;
+}

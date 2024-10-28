@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="static/web/style_home.css" />
+{% endblock %}
+
+{% block content %}
+    <div class="intro">
+      <div class="intro-first">
+        <p class="intro-lable">{{ about.label }}</p>
+        <div class="about">
+          <span style="text-decoration: underline; color: #A9DFD8;">TradeWARF</span>
+          <span>{{ about.about_0_5 }}</span>
+          <span>{{ about.about_1 }}</span>
+        </div>
+        <div class="about">
+          <span>{{ about.about_2 }}</span>
+        </div>
+      </div>
+      <div class="intro-second">
+        <div class="about-second">
+          <span style="color: #A9DFD8;">{{ about.about_3 }}</span>
+        </div>
+      </div>
+      <div class="intro-third">
+        <p class="about-fourth">{{ about.about_4 }}</p>
+      </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{
+  "label": "TradeWARF",
+  "navigation": {
+    "title": "TradeWARF",
+    "arcane": "Arcanes",
+    "guns": "Fractional guns",
+    "prime_mods": "Prime mods",
+    "teshin_shop": "Teshin shop"
+  },
+  "about": {
+    "label": "About TradeWARF",
+    "about_0_5": " — your assistant in the world of Warframe!",
+    "about_1": " On the site you will be able to find all the necessary game items, follow the price changes on the game market, as well as evaluate the sales statistics.",
+    "about_2": "Provide a simple interface to search and track in-game items so you can easily find the right prime blueprints, mods, and mystifiers.",
+    "about_3": "Use this service for free and without restrictions, but remember that any commercial use of the site code is prohibited! TradeWARF is not a trading platform, but a resource with data about game items and statistics of their sales.",
+    "about_4": "If you have any questions, problems, comments or complaints, you can always ask for help to the author of the project in any convenient way. Also we will always be glad to hear your suggestions or wishes for improvement."
+  },
+  "admin_location": {
+    "id": "Id",
+    "name": "Name",
+    "approve_details": "Approve location",
+    "location_name": "Location Name",
+    "button_add_label": "Approve"
+  },
+  "admin_approve_location": {
+    "info": "Download the URL from the Warframe Market to fill in the blanks",
+    "wfm_id": "Warframe Market ID",
+    "url_name": "Item URL",
+    "trading_tax": "Trading Tax",
+    "icon": "Icon URL",
+    "max_rank": "Max Rank",
+    "vosfor": "Vosfor",
+    "reputation": "Reputation",
+    "choose_location": "Choose Location"
+  },
+  "admin_items": {
+    "item_id": "Item Id",
+    "wfm_id": "Wfm Id",
+    "url": "Url"
+  }
+}

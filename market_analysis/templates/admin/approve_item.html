@@ -1,0 +1,84 @@
+{% extends 'base.html' %} {% block head %}
+<link rel="stylesheet" href="../static/admin/style_approve_item.css" />
+<script src="../static/admin/js/approve_item.js"></script>
+{% endblock %} {% block content %}
+<div class="approve-item">
+  <div class="approve-url">
+    <p>{{ admin_approve_location.info }}</p>
+    <input id="iclude-url" , type="url" />
+    <button class="approve-button" , onclick="load('{{ host }}')">
+      Добавить
+    </button>
+  </div>
+  <hr />
+  <div class="approve-info" , id="approve-info">
+    <div class="info">
+      <div>
+        <p>{{ admin_approve_location.wfm_id }}</p>
+        <input id="wfm-id" , type="text" , onkeyup="isNotEmpty(this.id)" />
+      </div>
+      <div>
+        <p>{{ admin_approve_location.url_name }}</p>
+        <input id="url-name" , type="text" , onkeyup="isNotEmpty(this.id)" />
+      </div>
+      <div>
+        <p>{{ admin_approve_location.trading_tax }}</p>
+        <input id="trading-tax", type="number" , onkeyup="isNotEmpty(this.id)" />
+      </div>
+      <div>
+        <p>{{ admin_approve_location.icon }}</p>
+        <input id="icon-url" , type="text" , onkeyup="isNotEmpty(this.id)" />
+      </div>
+      <div>
+        <p>{{ admin_approve_location.max_rank }}</p>
+        <input id="max-rank" , type="number" , onkeyup="isNotEmpty(this.id)" />
+      </div>
+      <div>
+        <p>{{ admin_approve_location.vosfor }}</p>
+        <input id="vosfor" , type="number" , onkeyup="isNotEmpty(this.id)" />
+      </div>
+      <div>
+        <p>{{ admin_approve_location.reputation }}</p>
+        <input
+          id="reputation"
+          ,
+          type="number"
+          ,
+          onkeyup="isNotEmpty(this.id)"
+        />
+      </div>
+    </div>
+    <div class="location-select">
+      <div class="location-select">
+        <p>{{ admin_approve_location.choose_location }}</p>
+        <select name="location-select", id="location-select">
+          {% for location in locations %}
+          <option value="{{ location.id }}">{{ location.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="approve-checkbox">
+        <input class="input-checkbox", id="input-checkbox", type="checkbox" />
+        <p>Добавить предмет в пул апдейтов?</p>
+      </div>
+    </div>
+  </div>
+  <hr class="approve-hr" , id="approve-hr" />
+  <div class="approve-end-button" , id="approve-end-button">
+    <button onclick="update_item('{{ host }}')">
+      Добавить предмет в базу данных
+    </button>
+  </div>
+</div>
+<div class="toasts">
+  <div class="toast">
+    <div class="toast-content">
+      <div class="toast-message">
+        <span class="toast-label">Error</span>
+        <span class="toast-text">Text</span>
+      </div>
+    </div>
+    <div class="toast-progress"></div>
+  </div>
+</div>
+{% endblock %}

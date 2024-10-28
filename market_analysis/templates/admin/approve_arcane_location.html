@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% block head %}
+<link
+  rel="stylesheet"
+  href="../static/admin/style_approve_arcane_location.css"
+/>
+<script src="../static/admin/js/approve_arcane_location.js"></script>
+
+{% endblock %} {% block content %}
+<div class="approve-arcane-location">
+  <div class="scroll-table">
+    <table id="location-table">
+      <thead>
+        <tr>
+          <th class="col">{{ admin_location.id }}</th>
+          <th class="col">{{ admin_location.name }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for location in locations %}
+        <tr>
+          <th scope="row">{{ location.id }}</th>
+          <td>{{ location.name }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="add-location-container">
+    <details>
+      <summary>{{ admin_location.approve_details }}</summary>
+      <div>
+        <p>{{ admin_location.location_name }}</p>
+        <input class="location-input" , id="location-input" , type="text" />
+        <button
+          class="approve-location-button"
+          ,
+          onclick="on_click('{{ host }}')"
+        >
+          {{ admin_location.button_add_label }}
+          <img />
+        </button>
+      </div>
+    </details>
+  </div>
+</div>
+<div class="toasts">
+  <div class="toast">
+    <div class="toast-content">
+      <div class="toast-message">
+        <span class="toast-label">Error</span>
+        <span class="toast-text">Text</span>
+      </div>
+    </div>
+    <div class="toast-progress"></div>
+  </div>
+</div>
+{% endblock %}
